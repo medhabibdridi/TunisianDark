@@ -1,0 +1,35 @@
+.title-page {
+    text-align: center;
+  
+}
+.words{
+    font-size: 40px;
+    font-weight: bold;
+    text-align: left;
+}
+h1{
+    font-size: 72px;
+    font-weight: bold;
+    text-align: left;
+}
+.parapgraphe{
+    font-size: 21px;
+    color: white;
+    text-transform: none;
+    font-weight: 500;
+    line-height: 35px;
+    margin-left: 7px;
+}
+.buttons{
+    margin-left: 70px;   
+
+}
+.buttons2{
+    margin-left: 150px;   
+
+}
+
+.with-discord{
+    display: flex;
+    justify-content: space-between;
+}
