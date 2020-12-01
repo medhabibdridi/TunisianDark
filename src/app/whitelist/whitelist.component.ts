@@ -55,7 +55,7 @@ white : whitelist = new whitelist() ;;
     return this.registerForm.get('age');
   }
   apply() { 
-    this.service.addEmploye(this.registerForm.value).subscribe(
+    this.service.addwhitelist(this.registerForm.value).subscribe(
       resultat => {
         console.log("User added");
         console.log()

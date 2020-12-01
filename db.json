@@ -46,24 +46,6 @@
   "whitelist": [
     {
       "nom": "test",
-      "id": "333",
-      "FirstName": "TEST",
-      "rules": "yes",
-      "mic": "yes",
-      "discord": "test#43",
-      "age": "23"
-    },
-    {
-      "nom": "test",
-      "id": "334",
-      "FirstName": "TEST",
-      "rules": "yes",
-      "mic": "yes",
-      "discord": "test#43",
-      "age": "23"
-    },
-    {
-      "nom": "test",
       "id": "335",
       "FirstName": "TEST",
       "rules": "yes",

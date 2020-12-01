@@ -11,6 +11,8 @@ import { DonationComponent } from './donation/donation.component';
 import { HomeComponent } from './home/home.component';
 import { WhitelistComponent } from './whitelist/whitelist.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { AddDonationComponent } from './add-donation/add-donation.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     DonationComponent,
     HomeComponent,
     WhitelistComponent,
+    DashboardComponent,
+    AddDonationComponent,
    
   ],
   imports: [
