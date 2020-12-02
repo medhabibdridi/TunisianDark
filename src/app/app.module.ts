@@ -11,6 +11,18 @@ import { WhitelistComponent } from './whitelist/whitelist.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AddDonationComponent } from './add-donation/add-donation.component';
+import { RegisterComponent } from './register/register.component';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+
+const config = {apiKey: "AIzaSyAyDT1u_rzLtHapBJ3AnFf9Hmc1HUfrgeY",
+authDomain: "tunisiandark-bd4df.firebaseapp.com",
+databaseURL: "https://tunisiandark-bd4df.firebaseio.com",
+projectId: "tunisiandark-bd4df",
+storageBucket: "tunisiandark-bd4df.appspot.com",
+messagingSenderId: "484718666179",
+appId: "1:484718666179:web:404d22126f1949e00e5d76"}
 
 @NgModule({
   declarations: [
@@ -23,6 +35,7 @@ import { AddDonationComponent } from './add-donation/add-donation.component';
     WhitelistComponent,
     DashboardComponent,
     AddDonationComponent,
+    RegisterComponent,
    
   ],
   imports: [
@@ -30,6 +43,9 @@ import { AddDonationComponent } from './add-donation/add-donation.component';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+    AngularFireModule.initializeApp(config),
+    AngularFirestoreModule,
+    AngularFireAuthModule,
     FormsModule
   ],
   providers: [],
