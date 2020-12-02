@@ -14,10 +14,10 @@ export class DonationService {
     return this.http.get<donation[]>(this.url)
 
   }
-  DeleteEmploye(id){
+  DeleteDonation(id){
     return this.http.delete(this.url + id)
   }
-  addEmploye(e: donation){
+  adddonation(e: donation){
     return this.http.post(this.url, e);
    }
    Search(id) {

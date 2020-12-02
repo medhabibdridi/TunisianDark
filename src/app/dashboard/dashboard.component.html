@@ -17,7 +17,7 @@
                             <th scope="col">age</th>
                             <th scope="col">rules </th>
                             <th scope="col"> mic status</th>
-                            <th scope="col"> admin </th>
+                            <th scope="col"> admin Control </th>
                             
                     
                           </tr>
@@ -44,13 +44,56 @@
                
      </div>
     </div>
+    <h1> Donation System </h1>
+    <div style="display: flex; justify-content: space-around; margin: 40px;"> 
+    <button   class="btn btn-primary" (click)="showForm()">
+      Create A new Donation Offer
+    </button>
+    <button  style="margin-right: 30px;"  class="btn btn-success" (click)="showDonation()" >
+      Manage donations
+    </button>
+  </div>
+    <div style="display: flex; justify-content: center;"> 
   
+    <app-add-donation (eventAddProduct)="pushDonation($event)" *ngIf="formState" ></app-add-donation>
+    
+  </div>
     </div>
            
                 
-          
-            
-            
+    <div class="row" > 
+      <div class="col-md-12" > 
+          <br>
+          <div class="movie"    >
+             <table class="table" *ngIf ="donationState">
+                 <thead>
+                   <tr>
+                     <th scope="col">Name</th>
+                     <th scope="col">description</th>
+                     <th scope="col">price</th>
+                    
+                     <th scope="col"> admin Control </th>
+                     
+             
+                   </tr>
+                 </thead>
+                 <tbody *ngFor="let d of donations" >
+                    <tr >
+                      
+                     <td>{{d.nom}}</td>
+                     <td>{{d.description}}</td>
+                     <td>{{d.price}}</td>
+                     <button  class="btn btn-primary" >Edit </button>
+                     <button class="btn btn-light" (click)="delete2(d.id)" >delete</button>
+                    </tr>
+                 </tbody>
+                 <button  style="margin: 20px;" class="btn btn-dark" (click)="hideDonation()" > close </button>
+
+             </table>
+          </div>      
+ 
+       </div>
+       </div>     
                 
          
       

@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { donation } from 'src/model/donation';
 import { whitelist } from 'src/model/whitelist';
+import { DonationService } from '../shared/services/donation.service';
 import { WhitelistService } from '../shared/services/whitelist.service';
 
 @Component({
@@ -9,10 +11,17 @@ import { WhitelistService } from '../shared/services/whitelist.service';
 })
 export class DashboardComponent implements OnInit {
   whitelist : whitelist[]
-  constructor(private service:WhitelistService) { }
+  donations : donation[] ;
+  formState : boolean
+  donationState : boolean
+
+  @Input() dono
+  constructor(private service:WhitelistService, private service1:DonationService) { }
 
   ngOnInit(): void {
     this.service.getWhitelist().subscribe((data:whitelist[])=> this.whitelist = data );
+    this.service1.getDonation().subscribe((data:donation[])=> this.donations = data );
+
   }
 
   delete(id){
@@ -20,4 +29,33 @@ export class DashboardComponent implements OnInit {
       () => this.whitelist = this.whitelist.filter(whitelist => whitelist.id != id)
     );
   }
-}
+  delete2(id){
+    this.service1.DeleteDonation(id).subscribe(
+      () => this.donations = this.donations.filter(donation => donation.id != id)
+    );
+  }
+
+  pushDonation(p: donation){
+    this.service1.adddonation(p).subscribe(
+      resultat => {
+      }, (err) => {
+        console.log(err);
+      }     
+    );
+     this.formState = false ; 
+  }
+    showForm(){
+      this.formState = true;
+    }
+    showDonation(){
+     this.donationState = true
+    }
+    HideForm(){
+      this.formState = false ;
+    }
+    hideDonation(){
+      this.donationState = false ; 
+     }
+  }
+ 
+
