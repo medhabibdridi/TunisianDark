@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient , HttpHeaders  } from '@angular/common/http';
 import { donation } from 'src/model/donation';
 
+import { catchError, map, tap } from 'rxjs/operators';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -23,6 +25,28 @@ export class DonationService {
    Search(id) {
      return this.http.get(this.url + id) ; 
    }
-   put(e: donation){
+   put(e: donation ,id){
      return this.http.put(this.url , e ) ;
-   } }
+   }
+
+
+
+   
+   getdonationFromId(id: number): Observable<any> {
+    
+    const url = `${this.url}/${id}`;
+    return this.http.get<donation>(url).pipe(
+      tap(selectedMovie => console.log(`selected movie = ${JSON.stringify(selectedMovie)}`)),
+      catchError(error => of(new donation()))
+    );
+  }
+  updateMovie(movie: donation): Observable<any> {
+    const httpOptions = {
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+    };
+    return this.http.put(`${this.url}/${movie.id}`, movie, httpOptions).pipe(
+      tap(updatedMovie => console.log(`updated movie = ${JSON.stringify(updatedMovie)}`)),
+      catchError(error => of(new donation()))
+    );
+  }
+  }

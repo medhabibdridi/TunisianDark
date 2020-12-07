@@ -2,10 +2,10 @@
   "donation": [
     {
       "id": 12324,
-      "nom": "job farm",
+      "nom": "job fameraaaa",
       "description": "boss job farm for 1 season ",
-      "img": "https://i.ytimg.com/vi/dKPfuIwIdQU/maxresdefault.jpg",
-      "price": "20$"
+      "img": "C:\\fakepath\\logo@2x.png",
+      "price": "20"
     },
     {
       "id": 12324,
@@ -41,18 +41,21 @@
       "description": "get any skin you want for a whole season",
       "img": "https://img.gta5-mods.com/q95/images/sims-4-female-custom-oc-add-on-ped-replace/ef7085-Grand%20Theft%20Auto%20V%2008.13.2017%20-%2003.23.24.05.jpg",
       "price": "20$"
-    },
-    {
-      "nom": "fd",
-      "description": "dffd",
-      "price": 23,
-      "id": 12325
     }
   ],
   "whitelist": [
     {
       "nom": "test",
       "id": "335",
+      "FirstName": "TEST",
+      "rules": "yes",
+      "mic": "yes",
+      "discord": "test#43",
+      "age": "23"
+    },
+    {
+      "nom": "test",
+      "id": "333",
       "FirstName": "TEST",
       "rules": "yes",
       "mic": "yes",

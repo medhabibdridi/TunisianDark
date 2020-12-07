@@ -1,0 +1,18 @@
+.main-content .container {
+    background-color:white ;
+        width: 2000px;
+     border-radius: 5px;
+     padding: 50px;
+    
+     margin: 100px;
+     margin-left: 400px;
+     align-self: center;
+    }
+    .container{
+    
+        
+         position: absolute; left:
+          0; margin-top: 20px;
+        
+   
+   }

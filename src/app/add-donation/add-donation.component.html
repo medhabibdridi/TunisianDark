@@ -10,7 +10,7 @@
   </div>
   <div class="form-group">
     <label>Description</label>
-    <input type="text" name="title" class="form-control" [(ngModel)]="donation.description"
+    <input type="text" name="title" class="form-control" [(ngModel)]="donation.img"
            required minlength="3" #t="ngModel" pattern="[a-zA-Z]+$">
   </div>
   <div class="alert alert-danger" *ngIf="t.touched && t.invalid">
@@ -18,6 +18,17 @@
     <div *ngIf="t.errors.minlength">title minlength is 3</div>
     <div *ngIf="t.errors.pattern">enter a valid description</div>
   </div>
+ 
+   
+    <div class="form-group">
+      <label> Cover image </label>
+      <div >
+   <input type="file"   class="form-control" [(ngModel)]="donation.img">
+  
+  
+    </div>
+    </div>
+
   <div class="form-group">
     <label>prix </label>
     <input type="number" name="quantity" class="form-control" [(ngModel)]="donation.price"
@@ -37,3 +48,4 @@
 
 </div>
 </form>
+<p>Values: {{ donation| json}}</p>

@@ -14,14 +14,16 @@ export class DashboardComponent implements OnInit {
   donations : donation[] ;
   formState : boolean
   donationState : boolean
-
+ donation : donation
+ SelectedFile ; 
+ 
   @Input() dono
   constructor(private service:WhitelistService, private service1:DonationService) { }
 
   ngOnInit(): void {
     this.service.getWhitelist().subscribe((data:whitelist[])=> this.whitelist = data );
     this.service1.getDonation().subscribe((data:donation[])=> this.donations = data );
-
+this.donation = new donation
   }
 
   delete(id){
@@ -35,8 +37,8 @@ export class DashboardComponent implements OnInit {
     );
   }
 
-  pushDonation(p: donation){
-    this.service1.adddonation(p).subscribe(
+  pushDonation(){
+    this.service1.adddonation(this.donation).subscribe(
       resultat => {
       }, (err) => {
         console.log(err);
@@ -56,6 +58,17 @@ export class DashboardComponent implements OnInit {
     hideDonation(){
       this.donationState = false ; 
      }
+ 
+    update(id ){
+      this.donation.id= id
+      this.donation.nom
+    
+    }
+    onFileselected(event)
+    {
+   this.SelectedFile=event.target.files[0]; }
+
+   
   }
  
 

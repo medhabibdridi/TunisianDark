@@ -11,6 +11,8 @@ export class AddDonationComponent implements OnInit {
    donation : donation ; 
    @Output() eventAddProduct = new EventEmitter<donation>();
   formState ; 
+  img  ;
+  SelectedFile = null ; 
   constructor( private service1 : DonationService) { }
 
   ngOnInit(): void {
@@ -24,4 +26,11 @@ export class AddDonationComponent implements OnInit {
   HideForm(){
     this.formState = true ;
   }
+  
+  onFileselected(event)
+  {
+ this.SelectedFile=event.target.files[0]; }
+
+ 
+
 }
