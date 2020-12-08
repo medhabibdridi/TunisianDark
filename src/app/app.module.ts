@@ -16,6 +16,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { DonationdetailComponent } from './donationdetail/donationdetail.component';
+import { DonationPageComponent } from './donation-page/donation-page.component';
 
 const config = {apiKey: "AIzaSyAyDT1u_rzLtHapBJ3AnFf9Hmc1HUfrgeY",
 authDomain: "tunisiandark-bd4df.firebaseapp.com",
@@ -38,6 +39,7 @@ appId: "1:484718666179:web:404d22126f1949e00e5d76"}
     AddDonationComponent,
     RegisterComponent,
     DonationdetailComponent,
+    DonationPageComponent,
    
   ],
   imports: [

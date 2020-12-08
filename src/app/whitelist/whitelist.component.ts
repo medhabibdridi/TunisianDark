@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 })
 export class WhitelistComponent implements OnInit {
 
-  registerForm: FormGroup;
+  whitelistform: FormGroup;
   Lwhitelist: whitelist [] ;
 white : whitelist = new whitelist() ;; 
   
@@ -20,9 +20,9 @@ white : whitelist = new whitelist() ;;
 
   ngOnInit(): void {
    
-    this.registerForm = new FormGroup({
+    this.whitelistform = new FormGroup({
       nom: new FormControl('test', [Validators.required, Validators.minLength(3)]),
-      id: new FormControl('333', [Validators.required, Validators.minLength(3)]),
+     
       FirstName: new FormControl('TEST', [Validators.required, Validators.minLength(3)]),
       rules: new FormControl('yes', Validators.required, ),
       mic: new FormControl('yes', Validators.required, ),
@@ -34,34 +34,32 @@ white : whitelist = new whitelist() ;;
     });
   }
   get nom() {
-    return this.registerForm.get('nom');
+    return this.whitelistform.get('nom');
   }
-  get id() {
-    return this.registerForm.get('id');
-  }
+ 
   get FirstName() {
-    return this.registerForm.get('FirstName');
+    return this.whitelistform.get('FirstName');
   }
   get mic() {
-    return this.registerForm.get('mic');
+    return this.whitelistform.get('mic');
   }
   get rules() {
-    return this.registerForm.get('rules');
+    return this.whitelistform.get('rules');
   }
   get discord() {
-    return this.registerForm.get('discord');
+    return this.whitelistform.get('discord');
   }
   get age() {
-    return this.registerForm.get('age');
+    return this.whitelistform.get('age');
   }
   apply() { 
-    this.service.addwhitelist(this.registerForm.value).subscribe(
+    this.service.addwhitelist(this.whitelistform.value).subscribe(
       resultat => {
         console.log("User added");
         console.log()
         this.router.navigateByUrl('/home');
 
-        alert('HELLO NEW USER :) ' + JSON.stringify(this.registerForm.value));
+        alert('HELLO NEW USER :) ' + JSON.stringify(this.whitelistform.value));
       }, (err) => {
         console.log(err);
       }

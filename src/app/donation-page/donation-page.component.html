@@ -1,0 +1,41 @@
+<main class="main-content">
+    <div class="container"> 
+    <div *ngIf="donation" class="details">
+
+        <div class="row" >
+            <div class="col-md-6">
+                <figure class="movie-poster"><img style="height: auto; width: 100%;" [src]='sanitizeImageUrl(donation.img.toString())'  alt="Game 1"></figure>
+            </div>
+            <div class="col-md-6">
+                <h2 class="movie-title">{{donation.nom}}</h2>
+                <div class="movie-summary">
+                    <p>{{donation.description}} </p>
+
+                </div>
+                <ul class="movie-meta">
+                    
+                    <li><strong>price:</strong> {{donation.price}} $</li>
+                </ul>
+
+                <ul class="starring">
+                    <li><strong>Directors:</strong> Kirk de Mico (as Kirk DeMico). Chris Sanders</li>
+                    <li><strong>Writers:</strong> Chris Sanders (screenplay), Kirk De Micco (screenplay)</li>
+                    <li><strong>Stars:</strong> Nicolas Cage, Ryan Reynolds, Emma Stone</li>
+                </ul>
+            </div>
+        </div> <!-- .row -->
+        <div class="entry-content">
+           
+        </div>
+  
+
+
+
+
+
+
+
+
+        </div>
+        </div>
+        </main>

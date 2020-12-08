@@ -25,9 +25,9 @@
             <div class="movie" *ngFor="let e of donations"   >
           <figure class="movie-poster"><img [src]='sanitizeImageUrl(e.img.toString())'  alt="Game 1"></figure>
          
-                 <div class="movie-title"><a href="single.html">{{e.nom}}</a></div>
+                 <div class="movie-title"><a routerLink="/donationpage/{{e.id}}">{{e.nom}}</a></div>
                         <p style="color: black;">{{e.description}}</p>
-                        <span class="pricetag">{{e.price}}</span>
+                        <span class="pricetag">{{e.price}}$</span>
 
             </div>
                     
