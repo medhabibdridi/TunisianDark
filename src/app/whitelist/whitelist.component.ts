@@ -59,7 +59,7 @@ white : whitelist = new whitelist() ;;
         console.log()
         this.router.navigateByUrl('/home');
 
-        alert('HELLO NEW USER :) ' + JSON.stringify(this.whitelistform.value));
+       
       }, (err) => {
         console.log(err);
       }

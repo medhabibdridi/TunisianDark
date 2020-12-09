@@ -37,7 +37,7 @@
             <label>change picture</label> <br>
             <input type="file" name="img" [(ngModel)]="donation.img"
                    >
-                   <img [src]='sanitizeImageUrl(donation.img.toString())'  alt="Game 1">
+                   <img [src]='sanitizeImageUrl(donation.img.toString())'  style="width: 300px;" alt="Game 1">
           </div>
          
         <button (click)="save()" class="  btn btn-primary" >save</button>

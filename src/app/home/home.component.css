@@ -52,8 +52,9 @@ h1{
     background-color: rgb(41, 39, 39) ;
      border-radius: 5px;
      padding: 50px;
-    
+   position: relative; 
      margin: 100px;
+     margin-top: 500px;
      margin-left: 400px;
      align-self: center;
     }
@@ -68,4 +69,18 @@ letter-spacing: normal;
 -webkit-font-smoothing: antialiased;
 box-sizing: border-box;
 display: block;
+}
+.youplay-footer{ 
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+font: 14px/1.42857 "Open Sans", sans-serif;
+color: #fff;
+background-color: rgb(32, 31, 31); 
+letter-spacing: normal;
+-webkit-font-smoothing: antialiased;
+box-sizing: border-box;
+display: block;
+position: relative;
+overflow: hidden;
+z-index: 1;
+width: 100%;
 }

@@ -1,46 +1,32 @@
 {
   "donation": [
     {
-      "id": 12324,
-      "nom": "job fameraaaa",
-      "description": "boss job farm for 1 season ",
-      "img": "C:\\fakepath\\4080-gta5-cycle-try-cucles-back.jpg",
-      "price": "20"
+      "id": 4,
+      "nom": "FARM SOCIETY OWNER ",
+      "description": " become a society Owner and recruit up to 5 friends , you can farm money twice as fast as regular players and become rich quickly , boss privilege once every season once donated ( with at least 30 days ownership)   ",
+      "img": "C:\\fakepath\\GTA_Online_MCBusiness_MethLab-1426-360.jpg",
+      "price": "15"
     },
     {
-      "id": 12324,
-      "nom": "super car pack",
-      "description": "any car you want from gta5 mods + personalized design",
-      "img": "https://img.gta5-mods.com/q95/images/seal-super-cars-bharatk041/c45805-d.jpg",
-      "price": "20$"
+      "id": 1,
+      "nom": " CUSTOM SUPER CAR ",
+      "description": "once per season you can pick a super car from Gta5Mods or from the Discord Cars List , Fast  sport cars up to 300km per hour  ",
+      "img": "C:\\fakepath\\maxresdefault.jpg",
+      "price": 15
     },
     {
-      "id": 12324,
-      "nom": "Ultra pack ",
-      "description": "house + car + skin for 2 seasons",
-      "img": "https://i.ytimg.com/vi/h8oinPedztQ/maxresdefault.jpg",
-      "price": "20$"
+      "id": 12,
+      "nom": "PERSONAL HIGH END HOUSE ",
+      "description": "Limited Mansion with Three stories and Pool custom built on the inside for one season and a guaranteed ownership for 30days regardless",
+      "img": "C:\\fakepath\\RichmanMansion-GTAV.png",
+      "price": "30"
     },
     {
-      "id": 12324,
-      "nom": "Ultra pack ",
-      "description": "house + car + skin for 2 seasons",
-      "img": "https://i.ytimg.com/vi/h8oinPedztQ/maxresdefault.jpg",
-      "price": "20$"
-    },
-    {
-      "id": 12324,
-      "nom": "Ultra pack ",
-      "description": "house + car + skin for 2 seasons",
-      "img": "https://i.ytimg.com/vi/h8oinPedztQ/maxresdefault.jpg",
-      "price": "20$"
-    },
-    {
-      "id": 12324,
-      "nom": "skin in game ",
-      "description": "get any skin you want for a whole season",
-      "img": "https://img.gta5-mods.com/q95/images/sims-4-female-custom-oc-add-on-ped-replace/ef7085-Grand%20Theft%20Auto%20V%2008.13.2017%20-%2003.23.24.05.jpg",
-      "price": "20$"
+      "id": 1231,
+      "nom": "CUSTOM PED",
+      "description": "Change your look by picking any Ped you lik from Gta5Mods for one season and a guaranteeed ownership for 30days regardless",
+      "img": "C:\\fakepath\\4789db4adff6b78e13d2dcc8b41bdaaf.jpg",
+      "price": "10"
     }
   ],
   "whitelist": [
@@ -61,6 +47,15 @@
       "mic": "yes",
       "discord": "test#43",
       "age": "23"
+    },
+    {
+      "nom": "test",
+      "FirstName": "TEST",
+      "rules": "yes",
+      "mic": "yes",
+      "discord": "test#43",
+      "age": "23",
+      "id": "tBwyoJA"
     }
   ]
 }
