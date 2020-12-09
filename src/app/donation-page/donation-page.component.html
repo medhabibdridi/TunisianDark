@@ -17,14 +17,40 @@
                     <li><strong>price:</strong> {{donation.price}} $</li>
                 </ul>
 
-               <button class="btn btn-dark " > how to donate </button>
+               <button class="btn btn-dark " (click)="showForm()"> how to donate </button>
             </div>
         </div> <!-- .row -->
-        <div class="entry-content">
-        
-
-
+        <div class="entry-content" *ngIf="formState">
+           
+            <h2 style="color: teal; font-family: fantasy; text-align: center;"> STEPS TO FOLLOW </h2>
+            <p> <strong> You can choose one of the following three available methods <br>
+                after payment make sure you send in the reciept to an admin in discord
+            </strong></p>
+            <div class="row" style="margin-top: 20px;"> 
             
+            <div class="col-md-4">
+                <a href="https://runpay.tn/">
+                <img style="width : 100%;" src="https://runpay.tn/files/news/106_fr.jpg">
+            </a>
+            <p style="font-size: large; color: teal; font-size: 20px; ">send the appropriate amount of money to : +216xxxxxx</p>
+            </div>
+            <div class="col-md-4">
+                <a href="https://www.paypal.com/tn/home">
+                    <img style="width : 100%;" src="https://www.todayjaffna.com/wp-content/uploads/2020/09/paypal-kryptowaehrung-geruecht-bitcoin-1l1.jpg">
+                </a>
+                <p style="font-size: large; color: teal; font-size: 20px; ">send the appropriate amount of money to : mohamedhabib.dridi@esprit.tn</p>
+            </div>
+            <div class="col-md-4">
+                <a href="https://www.e-dinar.poste.tn/">
+                    <img style="width : 100%;" src="https://content.mosaiquefm.net/uploads/content/thumbnails/1535195353_article.jpg">
+            </a>
+            <p style="font-size: large; color: teal; font-size: 20px; ">send the appropriate amount of money to : xxxxxxxxxxx</p>
+                </div>
+        </div>
+
+        <button class="btn btn-dark " (click)="hide()"> hide </button>
+
+
         </div>
   
 

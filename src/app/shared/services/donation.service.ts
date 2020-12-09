@@ -40,12 +40,12 @@ export class DonationService {
       catchError(error => of(new donation()))
     );
   }
-  updateMovie(movie: donation): Observable<any> {
+  updateDonation(don: donation): Observable<any> {
     const httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     };
-    return this.http.put(`${this.url}/${movie.id}`, movie, httpOptions).pipe(
-      tap(updatedMovie => console.log(`updated movie = ${JSON.stringify(updatedMovie)}`)),
+    return this.http.put(`${this.url}/${don.id}`, don, httpOptions).pipe(
+      tap(updatedDonation => console.log(`updated donation = ${JSON.stringify(updatedDonation)}`)),
       catchError(error => of(new donation()))
     );
   }

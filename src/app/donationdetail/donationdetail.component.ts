@@ -30,7 +30,7 @@ export class DonationdetailComponent implements OnInit {
     this.service.getdonationFromId(id).subscribe(donation => this.donation = donation);          
   }
   save(): void {
-    this.service.updateMovie(this.donation).subscribe(() => this.goBack());
+    this.service.updateDonation(this.donation).subscribe(() => this.goBack());
   }
   goBack(): void {
     this.location.back();

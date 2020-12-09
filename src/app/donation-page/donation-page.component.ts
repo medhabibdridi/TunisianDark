@@ -17,19 +17,21 @@ export class DonationPageComponent implements OnInit {
     private location: Location,
     private sanitizer: DomSanitizer) { }
     @Input() donation: donation;
+    formState : boolean
+
   ngOnInit(): void {
     this.getMovieFromRoute();
-
+    this.formState= false ; 
   }
-  
+
   getMovieFromRoute(): void {
     const id = +this.route.snapshot.paramMap.get('id');
     console.log(`this.route.snapshot.paramMap = ${JSON.stringify(this.route.snapshot.paramMap)}`);
-    //Call service to "get movie from id" ?
+   
     this.service.getdonationFromId(id).subscribe(donation => this.donation = donation);          
   }
   save(): void {
-    this.service.updateMovie(this.donation).subscribe(() => this.goBack());
+    this.service.updateDonation(this.donation).subscribe(() => this.goBack());
   }
   goBack(): void {
     this.location.back();
@@ -38,4 +40,11 @@ export class DonationPageComponent implements OnInit {
 
     return this.sanitizer.bypassSecurityTrustUrl( "assets/images/"+imageUrl.substring(12));
   }
+  showForm(){
+    this.formState = true;
+  }
+  hide(){
+    this.formState = false ; 
+  }
+
 }

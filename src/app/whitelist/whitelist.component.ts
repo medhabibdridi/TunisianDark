@@ -21,14 +21,14 @@ white : whitelist = new whitelist() ;;
   ngOnInit(): void {
    
     this.whitelistform = new FormGroup({
-      nom: new FormControl('test', [Validators.required, Validators.minLength(3)]),
+      nom: new FormControl('', [Validators.required, Validators.minLength(3)]),
      
-      FirstName: new FormControl('TEST', [Validators.required, Validators.minLength(3)]),
-      rules: new FormControl('yes', Validators.required, ),
-      mic: new FormControl('yes', Validators.required, ),
-      discord: new FormControl('test#43', [Validators.required, Validators.pattern("[a-z]+#+[0-9]*"),Validators.minLength(5)]),
+      FirstName: new FormControl('', [Validators.required, Validators.minLength(3)]),
+      rules: new FormControl('', Validators.required, ),
+      mic: new FormControl('', Validators.required, ),
+      discord: new FormControl('', [Validators.required, Validators.pattern("[a-z]+#+[0-9]*"),Validators.minLength(5)]),
 
-      age: new FormControl('23', [Validators.required, Validators.min(18)]
+      age: new FormControl('', [Validators.required, Validators.min(18)]
         ),
       
     });
