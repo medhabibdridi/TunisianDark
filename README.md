@@ -11,6 +11,13 @@ TunisianDark is a Tunisian Role play server ranked at the top of the servers in 
 this is a Demo website for the server ( info , applications , donations ...) 
 
 subscribe to our youtube  channel : https://www.youtube.com/channel/UCxs6fWGZ43wlhq_kYZ34mVg
+
+
 discord link : https://discord.gg/Q5WbuFC
+
+
+
+dev  copyright belong to medhabibdridi 
+server owner : wassim zargouni
 
 
