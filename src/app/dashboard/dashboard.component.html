@@ -1,8 +1,18 @@
 
-
+<div  style="display: flex;" >
  <main class="main-content">
     <div class="container">
-     <div class="title">
+      <div style="display: flex; justify-content: space-around; margin: 40px;"> 
+        <button   class="btn btn-primary" (click)="showForm()">
+          Create A new Donation Offer
+        </button>
+        <button  style="margin-right: 30px;"  class="btn btn-success" (click)="showDonation()" >
+          Manage donations
+        </button>
+        <button  style="margin-right: 30px;"  class="btn btn-dark" (click)="whitelistt()" >
+      manage whitelists  </button>
+      </div>
+     <div class="title" *ngIf="whitelistTable" >
          <h1> WhiteList Managment</h1>
          <div class="row" > 
              <div class="col-md-12" > 
@@ -33,89 +43,29 @@
                            
                   
                             <td>{{e.mic}}</td>
-                            <button  class="btn btn-primary" >Edit </button>
-                            <button class="btn btn-light"  (click)="delete(e.id)" >delete</button>
+                            <button class="btn btn-primary"  (click)="delete(e.id)" >delete</button>
                     
                             </tr>
                           
                         </tbody>
                     </table>
                  </div>
-               
+               <button class="btn btn-dark" (click)="hidewhite()">close</button>
      </div>
     </div>
-    <h1> Donation System </h1>
-    <div style="display: flex; justify-content: space-around; margin: 40px;"> 
-    <button   class="btn btn-primary" (click)="showForm()">
-      Create A new Donation Offer
-    </button>
-    <button  style="margin-right: 30px;"  class="btn btn-success" (click)="showDonation()" >
-      Manage donations
-    </button>
-  </div>
-    <div style="display: flex; justify-content: center;" *ngIf="formState"> 
-     
-      <form #f="ngForm">
-        <div class="form-group">
-          <label>offre Name</label>
-          <input type="text" name="id" class="form-control"
-                 [(ngModel)]="donation.nom" #i="ngModel" required>
-        </div>
-        <div class="alert alert-danger" *ngIf="i.touched && t.invalid" >
-          A Name is required
-        </div>
-        <div class="form-group">
-          <label>Description</label>
-          <input type="text" name="title" class="form-control" [(ngModel)]="donation.description"
-                 required minlength="3" #t="ngModel" pattern="[a-zA-Z]+$">
-        </div>
-        <div class="alert alert-danger" *ngIf="t.touched && t.invalid">
-          <div *ngIf="t.errors.required"> description is required</div>
-          <div *ngIf="t.errors.minlength">title minlength is 3</div>
-          <div *ngIf="t.errors.pattern">enter a valid description</div>
-        </div>
-       
-        <div class="form-group">
-          <label>add image</label> <br>
-          <input type="file" name="title" [(ngModel)]="donation.img"
-                 >
-        </div>
-        
-       
-      
-      
-        <div class="form-group">
-          <label>prix </label>
-          <input type="number" name="quantity" class="form-control" [(ngModel)]="donation.price"
-                 #q="ngModel" required >
-        </div>
-        <div class="alert alert-danger" *ngIf="q.touched && q.invalid">
-          quantity is required
-        </div>
-        <div class="alert alert-danger" *ngIf="q.value<0 ">
-          quantity>0
-        </div>
-       <div style="display: flex; justify-content: space-between;"> 
-        <button class="btn btn-success"  type="submit"  [disabled]="f.invalid " (click)="pushDonation()" >
-          
-          save
-        </button>
-      
-      </div>
-      
-      </form>
-      
-    <!-- <app-add-donation (eventAddProduct)="pushDonation($event)" *ngIf="formState" ></app-add-donation> -->
     
-  </div>
-    </div>
+    
+</div>
+    
            
                 
     <div class="row" > 
       <div class="col-md-12" > 
           <br>
-          <div class="movie"    >
-             <table class="table" *ngIf ="donationState">
+          <div class="movie"  *ngIf ="donationState"  >
+            <h1>Donation System</h1>
+             <table class="table" >
+             
                  <thead>
                    <tr>
                      <th scope="col">Name</th>
@@ -142,7 +92,15 @@
        </div>
        </div>     
                 
-         
+       <div style="display: flex; justify-content: center;" *ngIf="formState"> 
+     
+    
+        <app-add-donation (eventAddProduct)="pushDonation($event)" *ngIf="formState" ></app-add-donation>
+        
+      </div>
+        
       
     </div> <!-- .container -->
+    
 </main>
+</div>

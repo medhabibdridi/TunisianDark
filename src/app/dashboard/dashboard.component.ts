@@ -15,6 +15,7 @@ export class DashboardComponent implements OnInit {
   formState : boolean
   donationState : boolean
  donation : donation
+ whitelistTable :boolean 
  SelectedFile ; 
  
   @Input() dono
@@ -24,8 +25,16 @@ export class DashboardComponent implements OnInit {
     this.service.getWhitelist().subscribe((data:whitelist[])=> this.whitelist = data );
     this.service1.getDonation().subscribe((data:donation[])=> this.donations = data );
 this.donation = new donation
-  }
 
+  }
+ whitelistt(){
+   this.whitelistTable = true ; 
+
+ }
+ hidewhite(){
+  this.whitelistTable = false ; 
+
+ }
   delete(id){
     this.service.Delete(id).subscribe(
       () => this.whitelist = this.whitelist.filter(whitelist => whitelist.id != id)
@@ -37,8 +46,8 @@ this.donation = new donation
     );
   }
 
-  pushDonation(){
-    this.service1.adddonation(this.donation).subscribe(
+  pushDonation(p:donation){
+    this.service1.adddonation(p).subscribe(
       resultat => {
       }, (err) => {
         console.log(err);
@@ -48,15 +57,19 @@ this.donation = new donation
   }
     showForm(){
       this.formState = true;
+
     }
     showDonation(){
-     this.donationState = true
+     this.donationState = true;
+     this.formState = false ; 
+    
     }
     HideForm(){
       this.formState = false ;
     }
     hideDonation(){
       this.donationState = false ; 
+      
      }
  
     update(id ){
