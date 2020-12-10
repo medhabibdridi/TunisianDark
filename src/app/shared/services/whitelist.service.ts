@@ -30,11 +30,6 @@ export class WhitelistService {
     return this.http.delete(this.url + id)
   }
  
-   Search(id) {
-     return this.http.get(this.url + id) ; 
-   }
-   put(e: whitelist){
-     return this.http.put(this.url , e ) ;
-   }
+  
   
 }

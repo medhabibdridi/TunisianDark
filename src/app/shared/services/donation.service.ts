@@ -22,21 +22,13 @@ export class DonationService {
   adddonation(e: donation){
     return this.http.post(this.url, e);
    }
-   Search(id) {
-     return this.http.get(this.url + id) ; 
-   }
-   put(e: donation ,id){
-     return this.http.put(this.url , e ) ;
-   }
-
-
-
+   
    
    getdonationFromId(id: number): Observable<any> {
     
     const url = `${this.url}/${id}`;
     return this.http.get<donation>(url).pipe(
-      tap(selectedMovie => console.log(`selected movie = ${JSON.stringify(selectedMovie)}`)),
+      tap(selectedDonation => console.log(`selected movie = ${JSON.stringify(selectedDonation)}`)),
       catchError(error => of(new donation()))
     );
   }

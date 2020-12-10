@@ -49,13 +49,13 @@
       "age": "23"
     },
     {
-      "nom": "test",
-      "FirstName": "TEST",
+      "nom": "dark",
+      "FirstName": "rayen",
       "rules": "yes",
-      "mic": "yes",
-      "discord": "test#43",
-      "age": "23",
-      "id": "tBwyoJA"
+      "mic": "no",
+      "discord": "rayen#23",
+      "age": 19,
+      "id": "DRBSvIs"
     }
   ]
 }

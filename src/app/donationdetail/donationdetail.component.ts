@@ -19,11 +19,11 @@ export class DonationdetailComponent implements OnInit {
     @Input() donation: donation;
 
   ngOnInit(): void {
-    this.getMovieFromRoute();
+    this.getDonationFromRoute();
 
   }
 
-  getMovieFromRoute(): void {
+  getDonationFromRoute(): void {
     const id = +this.route.snapshot.paramMap.get('id');
     console.log(`this.route.snapshot.paramMap = ${JSON.stringify(this.route.snapshot.paramMap)}`);
     //Call service to "get movie from id" ?
