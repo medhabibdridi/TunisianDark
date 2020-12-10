@@ -40,22 +40,22 @@
       "age": "23"
     },
     {
-      "nom": "test",
+      "nom": "habib",
       "id": "333",
-      "FirstName": "TEST",
-      "rules": "yes",
-      "mic": "yes",
-      "discord": "test#43",
-      "age": "23"
+      "FirstName": "black",
+      "rules": "no",
+      "mic": "no",
+      "discord": "tedfg#43",
+      "age": "30"
     },
     {
       "nom": "dark",
       "FirstName": "rayen",
-      "rules": "yes",
+      "rules": "no",
       "mic": "no",
       "discord": "rayen#23",
       "age": 19,
-      "id": "DRBSvIs"
+      "id": "888"
     }
   ]
 }

@@ -19,6 +19,7 @@ import { DonationdetailComponent } from './donationdetail/donationdetail.compone
 import { DonationPageComponent } from './donation-page/donation-page.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { PleaseLogInComponent } from './please-log-in/please-log-in.component';
+import { FilterPipe } from './filter.pipe';
 
 const config = {apiKey: "AIzaSyAyDT1u_rzLtHapBJ3AnFf9Hmc1HUfrgeY",
 authDomain: "tunisiandark-bd4df.firebaseapp.com",
@@ -44,6 +45,7 @@ appId: "1:484718666179:web:404d22126f1949e00e5d76"}
     DonationPageComponent,
     PageNotFoundComponent,
     PleaseLogInComponent,
+    FilterPipe,
    
   ],
   imports: [

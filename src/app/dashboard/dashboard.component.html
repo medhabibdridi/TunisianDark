@@ -13,7 +13,9 @@
       manage whitelists  </button>
       </div>
      <div class="title" *ngIf="whitelistTable" >
+
          <h1> WhiteList Managment</h1>
+         <input [(ngModel)]="searchText" class="form-control" placeholder=" Search bar " >
          <div class="row" > 
              <div class="col-md-12" > 
                  <br>
@@ -32,7 +34,7 @@
                     
                           </tr>
                         </thead>
-                        <tbody *ngFor="let e of whitelist" >
+                        <tbody *ngFor="let e of whitelist | filter : searchText" >
                             <tr >
                              
                             <td>{{e.nom}}</td>

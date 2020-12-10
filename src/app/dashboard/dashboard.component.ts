@@ -17,6 +17,7 @@ export class DashboardComponent implements OnInit {
  donation : donation
  whitelistTable :boolean 
  SelectedFile ; 
+ searchText;
  
   @Input() dono
   constructor(private service:WhitelistService, private service1:DonationService) { }
