@@ -1,51 +1,68 @@
-<h1 style="color: red;">Donation System</h1>
+<h1 style="color: red">Donation System</h1>
 
-  <form #f="ngForm">
-    <div class="form-group">
-      <label>offre Name</label>
-      <input type="text" name="id" class="form-control"
-             [(ngModel)]="donation.nom" #i="ngModel" required>
-    </div>
-    <div class="alert alert-danger" *ngIf="i.touched && t.invalid" >
-      A Name is required
-    </div>
-    <div class="form-group">
-      <label>Description</label>
-      <input type="text" name="title" class="form-control" [(ngModel)]="donation.description"
-             required minlength="3" #t="ngModel" pattern="[a-zA-Z]+$">
-    </div>
-    <div class="alert alert-danger" *ngIf="t.touched && t.invalid">
-      <div *ngIf="t.errors.required"> description is required</div>
-      <div *ngIf="t.errors.minlength">title minlength is 3</div>
-      <div *ngIf="t.errors.pattern">enter a valid description</div>
-    </div>
-   
-    <div class="form-group">
-      <label>add image</label> <br>
-      <input type="file" name="title" [(ngModel)]="donation.img"
-             >
-    </div>
-    
-   
-  
-  
-    <div class="form-group">
-      <label>prix </label>
-      <input type="number" name="quantity" class="form-control" [(ngModel)]="donation.price"
-             #q="ngModel" required >
-    </div>
-    <div class="alert alert-danger" *ngIf="q.touched && q.invalid">
-      quantity is required
-    </div>
-    <div class="alert alert-danger" *ngIf="q.value<0 ">
-      quantity>0
-    </div>
-   <div style="display: flex; justify-content: space-between;"> 
-    <button class="btn btn-success"  type="submit"  [disabled]="f.invalid " (click)="save()" >
-      
+<form #f="ngForm">
+  <div class="form-group">
+    <label>offre Name</label>
+    <input
+      type="text"
+      name="id"
+      class="form-control"
+      [(ngModel)]="donation.nom"
+      #i="ngModel"
+      required
+    />
+  </div>
+  <div class="alert alert-danger" *ngIf="i.touched && i.invalid">
+    A Name is required
+  </div>
+  <div class="form-group">
+    <label>Description</label>
+    <input
+      type="text"
+      name="title"
+      class="form-control"
+      [(ngModel)]="donation.description"
+      required
+      minlength="3"
+      #t="ngModel"
+      pattern="[a-zA-Z]+$"
+    />
+  </div>
+  <div class="alert alert-danger" *ngIf="t.touched && t.invalid">
+    <div *ngIf="t.errors.required">description is required</div>
+    <div *ngIf="t.errors.minlength">title minlength is 3</div>
+    <div *ngIf="t.errors.pattern">enter a valid description</div>
+  </div>
+
+  <div class="form-group">
+    <label>add image</label> <br />
+    <input type="file" name="title" [(ngModel)]="donation.img" />
+  </div>
+
+  <div class="form-group">
+    <label>prix </label>
+    <input
+      type="number"
+      name="quantity"
+      class="form-control"
+      [(ngModel)]="donation.price"
+      #q="ngModel"
+      required
+    />
+  </div>
+  <div class="alert alert-danger" *ngIf="q.touched && q.invalid">
+    quantity is required
+  </div>
+  <div class="alert alert-danger" *ngIf="q.value < 0">quantity>0</div>
+  <div style="display: flex; justify-content: space-between">
+    <button
+      class="btn btn-success"
+      type="submit"
+      [disabled]="f.invalid"
+      (click)="save()"
+    >
       save
     </button>
-  
+   <p>{{donation | json}} </p> 
   </div>
-  
-  </form>
+</form>

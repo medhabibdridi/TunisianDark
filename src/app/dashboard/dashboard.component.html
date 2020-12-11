@@ -1,108 +1,120 @@
-
-<div  style="display: flex;" >
- <main class="main-content">
+<div style="display: flex">
+  <main class="main-content">
     <div class="container">
-      <div style="display: flex; justify-content: space-around; margin: 40px;"> 
-        <button   class="btn btn-primary" (click)="showForm()">
+      <div style="display: flex; justify-content: space-around; margin: 40px">
+        <button class="btn btn-primary" (click)="showForm()">
           Create A new Donation Offer
         </button>
-        <button  style="margin-right: 30px;"  class="btn btn-success" (click)="showDonation()" >
+        <button
+          style="margin-right: 30px"
+          class="btn btn-success"
+          (click)="showDonation()"
+        >
           Manage donations
         </button>
-        <button  style="margin-right: 30px;"  class="btn btn-dark" (click)="whitelistt()" >
-      manage whitelists  </button>
+        <button
+          style="margin-right: 30px"
+          class="btn btn-dark"
+          (click)="whitelistt()"
+        >
+          manage whitelists
+        </button>
       </div>
-     <div class="title" *ngIf="whitelistTable" >
+      <div class="title" *ngIf="whitelistTable">
+        <h1>WhiteList Managment</h1>
+        <input
+          [(ngModel)]="searchText"
+          class="form-control"
+          placeholder=" Search bar "
+        />
+        <div class="row">
+          <div class="col-md-12">
+            <br />
+            <div class="movie">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">discord Tag</th>
+                    <th scope="col">age</th>
+                    <th scope="col">rules</th>
+                    <th scope="col">mic status</th>
+                    <th scope="col">admin Control</th>
+                  </tr>
+                </thead>
+                <tbody *ngFor="let e of whitelist | filter: searchText">
+                  <tr>
+                    <td>{{ e.nom }}</td>
+                    <td>{{ e.FirstName }}</td>
+                    <td>{{ e.discord }}</td>
+                    <td>{{ e.age }}</td>
+                    <td>{{ e.rules }}</td>
 
-         <h1> WhiteList Managment</h1>
-         <input [(ngModel)]="searchText" class="form-control" placeholder=" Search bar " >
-         <div class="row" > 
-             <div class="col-md-12" > 
-                 <br>
-                 <div class="movie"    >
-                    <table class="table">
-                        <thead>
-                          <tr>
-                            <th scope="col">Name</th>
-                            <th scope="col">First Name</th>
-                            <th scope="col">discord Tag</th>
-                            <th scope="col">age</th>
-                            <th scope="col">rules </th>
-                            <th scope="col"> mic status</th>
-                            <th scope="col"> admin Control </th>
-                            
-                    
-                          </tr>
-                        </thead>
-                        <tbody *ngFor="let e of whitelist | filter : searchText" >
-                            <tr >
-                             
-                            <td>{{e.nom}}</td>
-                            <td>{{e.FirstName}}</td>
-                            <td>{{e.discord}}</td>
-                            <td>{{e.age}}</td>
-                            <td>{{e.rules}}</td>
-                           
-                  
-                            <td>{{e.mic}}</td>
-                            <button class="btn btn-primary"  (click)="delete(e.id)" >delete</button>
-                    
-                            </tr>
-                          
-                        </tbody>
-                    </table>
-                 </div>
-               <button class="btn btn-dark" (click)="hidewhite()">close</button>
-     </div>
-    </div>
-    
-    
-</div>
-    
-           
-                
-    <div class="row" > 
-      <div class="col-md-12" > 
-          <br>
-          <div class="movie"  *ngIf ="donationState"  >
+                    <td>{{ e.mic }}</td>
+                    <button class="btn btn-primary" (click)="delete(e.id)">
+                      delete
+                    </button>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <button class="btn btn-dark" (click)="hidewhite()">close</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <br />
+          <div class="movie" *ngIf="donationState">
             <h1>Donation System</h1>
-             <table class="table" >
-             
-                 <thead>
-                   <tr>
-                     <th scope="col">Name</th>
-                     <th scope="col">description</th>
-                     <th scope="col">price</th>
-                     <th scope="col"> admin Control </th>
-                   </tr>
-                 </thead>
-                 <tbody *ngFor="let d of donations" >
-                    <tr >
-                     <td>{{d.nom}}</td>
-                     <td>{{d.description}}</td>
-                     <td>{{d.price}}</td> 
-                     
-                     <button  class="btn btn-primary" routerLink="/donationDetail/{{d.id}}" (click)="update(d.id)" >Edit </button>
-                     <button class="btn btn-light" (click)="delete2(d.id)" >delete</button>
-                    </tr>
-                 </tbody>
-                 <button  style="margin: 20px;" class="btn btn-dark" (click)="hideDonation()" > close </button>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">description</th>
+                  <th scope="col">price</th>
+                  <th scope="col">admin Control</th>
+                </tr>
+              </thead>
+              <tbody *ngFor="let d of donations">
+                <tr>
+                  <td>{{ d.nom }}</td>
+                  <td>{{ d.description }}</td>
+                  <td>{{ d.price }}</td>
 
-             </table>
-          </div>      
- 
-       </div>
-       </div>     
-                
-       <div style="display: flex; justify-content: center;" *ngIf="formState"> 
-     
-    
-        <app-add-donation (eventAddProduct)="pushDonation($event)" *ngIf="formState" ></app-add-donation>
-        
+                  <button
+                    class="btn btn-primary"
+                    routerLink="/donationDetail/{{ d.id }}"
+                    (click)="update(d.id)"
+                  >
+                    Edit
+                  </button>
+                  <button class="btn btn-light" (click)="delete2(d.id)">
+                    delete
+                  </button>
+                </tr>
+              </tbody>
+              <button
+                style="margin: 20px"
+                class="btn btn-dark"
+                (click)="hideDonation()"
+              >
+                close
+              </button>
+            </table>
+          </div>
+        </div>
       </div>
-        
-      
-    </div> <!-- .container -->
-    
-</main>
+
+      <div style="display: flex; justify-content: center" *ngIf="formState">
+        <app-add-donation
+          (eventAddProduct)="pushDonation($event)"
+          *ngIf="formState"
+        ></app-add-donation>
+      </div>
+    </div>
+    <!-- .container -->
+  </main>
 </div>

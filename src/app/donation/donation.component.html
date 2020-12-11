@@ -1,46 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Required meta tags-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Colorlib Templates">
-    <meta name="author" content="Colorlib">
-    <meta name="keywords" content="Colorlib Templates">
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="Colorlib Templates" />
+    <meta name="author" content="Colorlib" />
+    <meta name="keywords" content="Colorlib Templates" />
+  </head>
 
-    
-</head>
-
-<body>
-  <div class="box"> 
-   
-    <div class="main-content">
-   
+  <body>
+    <div class="box">
+      <div class="main-content">
         <div class="container">
-            <p style="color: black; font-weight: 200px; font-style: oblique;"> Tunisian Dark   Shop </p><br> <br>
-            <div class="page">
-             
-          <div class="movie-list ">
-            <div class="movie" *ngFor="let e of donations"   >
-          <figure class="movie-poster"><img [src]='sanitizeImageUrl(e.img.toString())'  alt="Game 1"></figure>
-         
-                 <div  class="movie-title"><a routerLink="/donationpage/{{e.id}}">{{e.nom}}</a></div>
-                        <p style="color: black;">{{e.description}}</p>
-                        <span appHighlight class="pricetag">{{e.price}}$</span>
+          <p style="color: black; font-weight: 200px; font-style: oblique">
+            Tunisian Dark Shop
+          </p>
+          <br />
+          <br />
+          <div class="page">
+            <div class="movie-list">
+              <div class="movie" *ngFor="let e of donations">
+                <figure class="movie-poster">
+                  <img
+                    [src]="sanitizeImageUrl(e.img.toString())"
+                    alt="Game 1"
+                  />
+                </figure>
 
+                <div class="movie-title">
+                  <a routerLink="/donationpage/{{ e.id }}">{{ e.nom }}</a>
+                </div>
+                <p style="color: black">{{ e.description }}</p>
+                <span appHighlight class="pricetag">{{ e.price }}$</span>
+              </div>
             </div>
-     </div>
+          </div>
+        </div>
       </div>
-                    
-         </div>
-</div>
-  
-  </div>
+    </div>
     <!-- Jquery JS-->
-    
-
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
-
+  </body>
+  <!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>
 <!-- end document-->

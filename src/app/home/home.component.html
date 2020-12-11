@@ -1,231 +1,416 @@
-
-<div class="words" > 
-    <div style="display: flex; justify-content: space-between;"> 
-      
-  <div>  
-        <h1 style="color: white;">Welcome   </h1>    
-        <p> To Tunisian Dark </p>
-        <div class="parapgraphe ">
-                <h5>Welcome to one of the best tunisian RP servers  with over 1000+ member  <br>   Click below to connect to the server or join our Discord </h5>
+<div class="words">
+  <div style="display: flex; justify-content: space-between">
+    <div>
+      <h1 style="color: white">Welcome</h1>
+      <p>To Tunisian Dark</p>
+      <div class="parapgraphe">
+        <h5>
+          Welcome to one of the best tunisian RP servers with over 1000+ member
+          <br />
+          Click below to connect to the server or join our Discord
+        </h5>
+      </div>
+      <div *ngIf="auth.user$ | async">
+        <button class="btn btn-success" (click)="go()">admin panel</button>
+      </div>
+    </div>
+    <div style="margin-left: 100px; border-radius: 60px">
+      <iframe
+        width="760"
+        height="450"
+        src="https://www.youtube.com/embed/lY8B0x5-Qdo"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row" style="display: flex; justify-content: space-evenly">
+    <div class="col-md-3">
+      <div style="padding: 30px">
+        <iframe
+          src="https://api.trackyserver.com/widget/tracky?id=639023&lang_code=fr&map=1&version=1&votes=1&plist=1&connect=1&button_name=Connection&color1=FF8415&color2=333333&color3=333333&color4=FFFFFF&color5=FFFFFF&color7=8A8E94&color8=8a8e94&color9=fff&title=Tunisian Dark "
+          width="400"
+          height="300"
+          allowtransparency="true"
+          frameborder="0"
+        ></iframe>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div style="padding: 30px">
+        <iframe
+          src="https://discord.com/widget?id=712158065906155560&theme=dark"
+          width="500"
+          height="300"
+          allowtransparency="true"
+          frameborder="0"
+          sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+  <div class="row"></div>
+  <div
+    style="
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      --wp-admin-theme-color: #007cba;
+      --wp-admin-theme-color-darker-10: #006ba1;
+      --wp-admin-theme-color-darker-20: #005a87;
+      font-size: 14px;
+      line-height: 1.42857143;
+      color: #ccc;
+      font-family: Roboto, 'Open Sans', Arial;
+      box-sizing: border-box;
+      outline: none !important;
+      transition: all 0.4s ease-in-out;
+      animation: wpb_appear 0.7s 1 cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transform: scale(1);
+      opacity: 1;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+      margin-bottom: 25px;
+      text-align: center;
+      margin-top: 30px;
+    "
+    class="wpb_single_image wpb_content_element vc_align_center wpb_animate_when_almost_visible wpb_appear appear wpb_start_animation animated"
+  >
+    <figure class="wpb_wrapper vc_figure">
+      <div class="vc_single_image-wrapper vc_box_border_grey">
+        <img
+          width="1088"
+          height="622"
+          src="https://tunisianunderground.com/wp-content/uploads/2020/05/fresponsive-1.png"
+          class="vc_single_image-img attachment-full"
+          alt=""
+          loading="lazy"
+          srcset="
+            https://tunisianunderground.com/wp-content/uploads/2020/05/fresponsive-1.png          1088w,
+            https://tunisianunderground.com/wp-content/uploads/2020/05/fresponsive-1-600x343.png   600w,
+            https://tunisianunderground.com/wp-content/uploads/2020/05/fresponsive-1-300x172.png   300w,
+            https://tunisianunderground.com/wp-content/uploads/2020/05/fresponsive-1-1024x585.png 1024w,
+            https://tunisianunderground.com/wp-content/uploads/2020/05/fresponsive-1-768x439.png   768w
+          "
+          sizes="(max-width: 1088px) 100vw, 1088px"
+        />
+      </div>
+    </figure>
+  </div>
+  <div class="container-fluid">
+    <div class="row" style="display: flex; justify-content: space-evenly">
+      <div class="col-md-12">
+        <div
+          class="wpb_text_column wpb_content_element wpb_animate_when_almost_visible wpb_left-to-right left-to-right vc_custom_1594226892502 wpb_start_animation animated"
+        >
+          <div class="wpb_wrapper">
+            <h1
+              style="
+                text-shadow: rgba(0, 0, 0, 0.6) 0px 1px 5px;
+                text-transform: none;
+                color: #2124dd;
+                margin-top: 0px;
+                margin-bottom: 0px;
+                text-align: center;
+              "
+            >
+              <span style="color: #352686">WHO ARE WE?</span>
+            </h1>
+            <h2
+              style="
+                text-shadow: rgba(0, 0, 0, 0.6) 0px 1px 5px;
+                text-transform: none;
+                color: #eeeeee;
+                margin-top: 0px;
+                margin-bottom: 0px;
+                text-align: center;
+              "
+            >
+              Tunisian Dark&nbsp; is a well established Tunisian Gaming
+              Community involved in grand theft auto role play the community
+              strive to build a gaming environment that embraces honesty,
+              loyalty , and camaraderie above all else. For over half a year we
+              have strived to provide quality and transparency to our members,
+              and look forward to ensuring everyone has a voice in the direction
+              of the community.
+            </h2>
+          </div>
         </div>
-        <div *ngIf="auth.user$ | async;">
-        <button class="btn btn-success" (click)=go()>  admin panel  </button>  </div>
-      
-
-  </div>
-  <div style="margin-left: 100px;  
-   border-radius: 60px;"> 
-  <iframe width="760" height="450" src="https://www.youtube.com/embed/lY8B0x5-Qdo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div> 
-</div>
-</div>
-  <div class="container-fluid" >
-      <div class="row" style="display: flex; justify-content: space-evenly;">
-        <div class="col-md-3">
-              <div style="padding: 30px;"> 
-            <iframe src="https://api.trackyserver.com/widget/tracky?id=639023&lang_code=fr&map=1&version=1&votes=1&plist=1&connect=1&button_name=Connection&color1=FF8415&color2=333333&color3=333333&color4=FFFFFF&color5=FFFFFF&color7=8A8E94&color8=8a8e94&color9=fff&title=Tunisian Dark " width="400" height="300" allowtransparency="true" frameborder="0"></iframe>
       </div>
-      </div>
-        <div class="col-md-3">
-            <div style="padding: 30px;"> 
-                  <iframe  src="https://discord.com/widget?id=712158065906155560&theme=dark" width="500" height="300" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>            </div>
-
+    </div>
+    <div class="container-fluid" style="background-color: black">
+      <div
+        class="row hh"
+        style="display: flex; justify-content: center; margin-top: 40px"
+      >
+        <div class="col-md-2">
+          <div>
+            <div
+              class="flickity-slider"
+              style="left: 0px; transform: translateX(0%)"
+            >
+              <div
+                aria-selected="false"
+                class=""
+                style="position: absolute; left: 0%"
+              >
+                <div class="img">
+                  <img
+                    style="width: 90%"
+                    src="https://specials-images.forbesimg.com/imageserve/5ebe9c34f1f48800066306b0/960x0.jpg?fit=scale"
+                    alt="GTA World - Heavy Text Based GTA V Roleplay server - Homepage"
+                  />
+                </div>
+                <div class="bottom-info">
+                  <h4 style="text-align: center; font-family: fantasy">
+                    Illegal RP
+                  </h4>
+                  <div style="border-top: 1px solid white">
+                    Start your own illegal faction and enjoy our advanced
+                    features, dedicated and purely crafted to fully support
+                    realistic illegal RP.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-    <div class="row">
-  
-    
-    </div>
-    <div style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    --wp-admin-theme-color: #007cba;
-    --wp-admin-theme-color-darker-10: #006ba1;
-    --wp-admin-theme-color-darker-20: #005a87;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #ccc;
-    font-family: Roboto, 'Open Sans', Arial;
-    box-sizing: border-box;
-    outline: none !important;
-    transition: all .4s ease-in-out;
-    animation: wpb_appear .7s 1 cubic-bezier(.175,.885,.32,1.275);
-    transform: scale(1);
-    opacity: 1;
-    animation-duration: 1s;
-    animation-fill-mode: both;
-    margin-bottom: 25px;
-    text-align: center;
-    margin-top: 30px;" class="wpb_single_image  wpb_content_element vc_align_center  wpb_animate_when_almost_visible wpb_appear appear wpb_start_animation animated">
-		
-      <figure class="wpb_wrapper vc_figure">
-        <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="1088" height="622" src="https://tunisianunderground.com/wp-content/uploads/2020/05/fresponsive-1.png" class="vc_single_image-img attachment-full" alt="" loading="lazy" srcset="https://tunisianunderground.com/wp-content/uploads/2020/05/fresponsive-1.png 1088w, https://tunisianunderground.com/wp-content/uploads/2020/05/fresponsive-1-600x343.png 600w, https://tunisianunderground.com/wp-content/uploads/2020/05/fresponsive-1-300x172.png 300w, https://tunisianunderground.com/wp-content/uploads/2020/05/fresponsive-1-1024x585.png 1024w, https://tunisianunderground.com/wp-content/uploads/2020/05/fresponsive-1-768x439.png 768w" sizes="(max-width: 1088px) 100vw, 1088px"></div>
-      </figure>
-    </div>
-    <div class="container-fluid" >
-      <div class="row" style="display: flex; justify-content: space-evenly;">
-
-  <div class="col-md-12">
-    
-    <div class="wpb_text_column wpb_content_element  wpb_animate_when_almost_visible wpb_left-to-right left-to-right vc_custom_1594226892502 wpb_start_animation animated">
-      <div class="wpb_wrapper">
-        <h1 style="text-shadow: rgba(0, 0, 0, 0.6) 0px 1px 5px; text-transform: none; color: #2124dd; margin-top: 0px; margin-bottom: 0px; text-align: center;"><span style="color: #352686;">WHO ARE WE?</span></h1>
-  <h2 style="text-shadow: rgba(0, 0, 0, 0.6) 0px 1px 5px; text-transform: none; color: #eeeeee; margin-top: 0px; margin-bottom: 0px; text-align: center;">
-    Tunisian Dark&nbsp;  is a well established Tunisian Gaming Community involved in grand theft auto role play
-     the community  strive to build a gaming environment that embraces honesty, loyalty
-     , and camaraderie above all else. For over half a  year we have strived to provide quality and transparency
-      to our members, and look forward to ensuring everyone has a voice in the direction of the community.</h2>
-  
+        <div class="col-md-2">
+          <div>
+            <div
+              class="flickity-slider"
+              style="left: 0px; transform: translateX(0%)"
+            >
+              <div
+                aria-selected="false"
+                class=""
+                style="position: absolute; left: 0%"
+              >
+                <div class="img">
+                  <img
+                    style="width: 90%"
+                    src="https://i.ytimg.com/vi/NYZ1nUjrdTc/maxresdefault.jpg"
+                    alt="GTA World - Heavy Text Based GTA V Roleplay server - Homepage"
+                  />
+                </div>
+                <div class="bottom-info">
+                  <h4 style="text-align: center; font-family: fantasy">
+                    Become a law enforcer
+                  </h4>
+                  <div style="border-top: 1px solid white">
+                    Join the police force and enjoy an amazing RP experience.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div>
+            <div
+              class="flickity-slider"
+              style="left: 0px; transform: translateX(0%)"
+            >
+              <div
+                aria-selected="false"
+                class=""
+                style="position: absolute; left: 0%"
+              >
+                <div class="img">
+                  <img
+                    style="width: 90%"
+                    src="https://www.gamersdecide.com/sites/default/files/styles/news_images/public/top_5_best_businesses_in_gta_online_cover_1.jpg"
+                    alt="GTA World - Heavy Text Based GTA V Roleplay server - Homepage"
+                  />
+                </div>
+                <div class="bottom-info">
+                  <h4 style="text-align: center; font-family: fantasy">
+                    Start a business
+                  </h4>
+                  <div style="border-top: 1px solid white; margin-top: 10px">
+                    Whether it is real estate or a transportation company -
+                    develop new RP opportunities by opening a business.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div>
+            <div
+              class="flickity-slider"
+              style="left: 0px; transform: translateX(0%)"
+            >
+              <div
+                aria-selected="false"
+                class=""
+                style="position: absolute; left: 0%"
+              >
+                <div class="img">
+                  <img
+                    style="width: 90%"
+                    src="https://www.gtabase.com/igallery/6901-7000/GTAOnline_Screenshot_Workshop-6970-1080.jpg"
+                    alt="GTA World - Heavy Text Based GTA V Roleplay server - Homepage"
+                  />
+                </div>
+                <div class="bottom-info">
+                  <h4 style="text-align: center; font-family: fantasy">
+                    Get a job
+                  </h4>
+                  <div style="border-top: 1px solid white">
+                    Pick one of the many available jobs, meet colleagues and
+                    develop RP opportunities.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-
-</div>
-</div>
-<div class="container-fluid"  style="background-color: black;" >
-  
-
-<div class="row hh"  style="display: flex;  justify-content: center; margin-top: 40px;">
-  <div class="col-md-2">
-    <div ><div class="flickity-slider" style="left: 0px; transform: translateX(0%);"><div aria-selected="false" class="" style="position: absolute; left: 0%;">
-      <div class="img">
-      <img style="width: 90%; " src="https://specials-images.forbesimg.com/imageserve/5ebe9c34f1f48800066306b0/960x0.jpg?fit=scale" alt="GTA World - Heavy Text Based GTA V Roleplay server - Homepage">
-      </div>
-      <div class="bottom-info">
-      <h4 style="text-align: center ;font-family: fantasy; ">Illegal RP</h4>
-      <div style="border-top: 1px solid white; "> Start your own illegal faction and enjoy our advanced features, dedicated and purely crafted to fully support realistic illegal RP.</div>
-      </div>
-      </div>
-</div>
-</div>
-</div>
-<div class="col-md-2">
-  <div ><div class="flickity-slider" style="left: 0px; transform: translateX(0%);"><div aria-selected="false" class="" style="position: absolute; left: 0%;">
-    <div class="img">
-    <img style="width: 90%; " src="https://i.ytimg.com/vi/NYZ1nUjrdTc/maxresdefault.jpg" alt="GTA World - Heavy Text Based GTA V Roleplay server - Homepage">
-    </div>
-    <div class="bottom-info">
-    <h4 style="text-align: center ;font-family: fantasy; ">Become a law enforcer</h4>
-    <div style="border-top: 1px solid white; "> Join the police force and enjoy an amazing RP experience.</div>
-    </div>
-    </div>
-  </div>
-</div>
-</div>
-<div class="col-md-2">
-  <div ><div class="flickity-slider" style="left: 0px; transform: translateX(0%);"><div aria-selected="false" class="" style="position: absolute; left: 0%;">
-    <div class="img">
-    <img style="width: 90%; " src="https://www.gamersdecide.com/sites/default/files/styles/news_images/public/top_5_best_businesses_in_gta_online_cover_1.jpg" alt="GTA World - Heavy Text Based GTA V Roleplay server - Homepage">
-    </div>
-    <div class="bottom-info">
-    <h4 style="text-align: center ; font-family: fantasy;">Start a business</h4>
-    <div style="border-top: 1px solid white; margin-top: 10px; "> Whether it is real estate or a transportation company - develop new RP opportunities by opening a business.</div>
-    </div>
-    </div>
-  </div>
-</div>
-</div>
-<div class="col-md-2">
-  <div ><div class="flickity-slider" style="left: 0px; transform: translateX(0%);"><div aria-selected="false" class="" style="position: absolute; left: 0%;">
-    <div class="img">
-    <img style="width: 90%; " src="https://www.gtabase.com/igallery/6901-7000/GTAOnline_Screenshot_Workshop-6970-1080.jpg" alt="GTA World - Heavy Text Based GTA V Roleplay server - Homepage">
-    </div>
-    <div class="bottom-info">
-    <h4 style="text-align: center ; font-family: fantasy; ">Get a job</h4>
-    <div style="border-top: 1px solid white; "> Pick one of the many available jobs, meet colleagues and develop RP opportunities.</div>
-    </div>
-    </div>
-  </div>
-</div>
-</div>
-</div>
-    </div>
-    
     <div class="main-content">
       <div class="container">
-                <div style="display: flex; justify-content: center; flex-direction: column;"> 
-            <h2 style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif; font-weight: 50px; color: #87a12e;">Rules</h2> <br> 
-            <p style="color: white; text-align: center;"> Server Rules: <br>
-                
-                  
-                 <strong> Vehicle Death Match (VDM):</strong> Ki to9tel 3abd bel karhba <br>
-                <strong > Random Death Match (RDM):</strong> To9tel 3abd ma8ir sbab <br>
-                 <strong> New life rule:</strong> <br>
-                  *Ken dokht b sle7 abyedh/bounya w jek EMS fay9ek ----> Tetfaker kolchay <br>
-                  *Ken tedhrabt bel kartouch w dokht w jek EMS -----> Tensa e5er scene saretlek <br>
-                  *Ken dokht w majekech l EMS respawnit fi sbitar ----> Tensa nhar kemel mel 7yetek <br>
-                  <strong> combat Logging: </strong><br>To5rej AFK/ALT+F4 w enti f scene <br>
-                  <strong> combat Storing:</strong><br>
-                  *Temchi t5abi karhabtek fel garage wa9teli fama chkoun khalet 3lik<br>
-                  *Tebda hareb men chkoun 3ala sa9ik tod5el lel garage/Fourrière t5araj karhabtek w tohreb<br>
-                 <strong>Fail Drive:</strong> <br>
-                  *Tetla3 fi jbal b karhba/moto moch OFF ROAD<br>
-                  *Tsou9 karhba w fiha 3ajla man9ouba<br>
-                  *Tnaguez min blassa 3alya b karhba/moto<br>
-                     PS: L karhba/moto rahi yelzem tkoun de base OFF-ROAD mch trakkeb 3ajla tout-terrain w t9olli OFF-ROAD<br>
-                 <strong> Clearshot: </strong> <br> Fil RP ma famech 7aja esm'ha clearshot ki yebda fama otage<br>
-                   Ma3andekech el 7a9 Tprovoqui Hakem/Haras 9ODDEM L MARKEZ bech yakhlet wrak<br>
-                   <strong>WIN RP:</strong> ki tebda t7awel bech terba7 scene b ay tari9a    <br>
-                   <strong>Disrespect: </strong> Tseb fel RP 3adi, ama l Kofr w saben chajara l 3a2iliya INTERDIT (RP/HRP) ===> PERMABAN   <br>
-                   <strong>Events-HRP: </strong> Ay scene walla ay info RP bch tsir to3tabar mahech valide   <br>
-                   <strong> Fear RP :</strong> Ki tesma3 RP/HRP elli fama chkoun bch ya3malek MortRP walla bech y7ellek l gang mte3ek to93od fi SafeZone walla ma3adech todkhel lil serveur  <br>
-                  
-                 </p> 
+        <div
+          style="display: flex; justify-content: center; flex-direction: column"
+        >
+          <h2
+            style="
+              text-align: center;
+              font-family: Georgia, 'Times New Roman', Times, serif;
+              font-weight: 50px;
+              color: #87a12e;
+            "
+          >
+            Rules
+          </h2>
+          <br />
+          <p style="color: white; text-align: center">
+            Server Rules: <br />
+
+            <strong> Vehicle Death Match (VDM):</strong> Ki to9tel 3abd bel
+            karhba <br />
+            <strong> Random Death Match (RDM):</strong> To9tel 3abd ma8ir sbab
+            <br />
+            <strong> New life rule:</strong> <br />
+            *Ken dokht b sle7 abyedh/bounya w jek EMS fay9ek ----> Tetfaker
+            kolchay <br />
+            *Ken tedhrabt bel kartouch w dokht w jek EMS -----> Tensa e5er scene
+            saretlek <br />
+            *Ken dokht w majekech l EMS respawnit fi sbitar ----> Tensa nhar
+            kemel mel 7yetek <br />
+            <strong> combat Logging: </strong><br />To5rej AFK/ALT+F4 w enti f
+            scene <br />
+            <strong> combat Storing:</strong><br />
+            *Temchi t5abi karhabtek fel garage wa9teli fama chkoun khalet
+            3lik<br />
+            *Tebda hareb men chkoun 3ala sa9ik tod5el lel garage/Fourrière
+            t5araj karhabtek w tohreb<br />
+            <strong>Fail Drive:</strong> <br />
+            *Tetla3 fi jbal b karhba/moto moch OFF ROAD<br />
+            *Tsou9 karhba w fiha 3ajla man9ouba<br />
+            *Tnaguez min blassa 3alya b karhba/moto<br />
+            PS: L karhba/moto rahi yelzem tkoun de base OFF-ROAD mch trakkeb
+            3ajla tout-terrain w t9olli OFF-ROAD<br />
+            <strong> Clearshot: </strong> <br />
+            Fil RP ma famech 7aja esm'ha clearshot ki yebda fama otage<br />
+            Ma3andekech el 7a9 Tprovoqui Hakem/Haras 9ODDEM L MARKEZ bech
+            yakhlet wrak<br />
+            <strong>WIN RP:</strong> ki tebda t7awel bech terba7 scene b ay
+            tari9a <br />
+            <strong>Disrespect: </strong> Tseb fel RP 3adi, ama l Kofr w saben
+            chajara l 3a2iliya INTERDIT (RP/HRP) ===> PERMABAN <br />
+            <strong>Events-HRP: </strong> Ay scene walla ay info RP bch tsir
+            to3tabar mahech valide <br />
+            <strong> Fear RP :</strong> Ki tesma3 RP/HRP elli fama chkoun bch
+            ya3malek MortRP walla bech y7ellek l gang mte3ek to93od fi SafeZone
+            walla ma3adech todkhel lil serveur <br />
+          </p>
+        </div>
       </div>
-          </div>
-      </div> <!-- .container -->
-  
-    
+    </div>
+    <!-- .container -->
 
-
-      <footer class="youplay-footer">
-        <div class="wrapper">
-        
+    <footer class="youplay-footer">
+      <div class="wrapper">
         <div class="widgets">
-        <div class="container">
-        <div class="row">
-        <div class="col-md-4">
-        <div class="side-block">
-        <div class="block-content" >
-        <img style="width: 50%; align-self: start;" src="https://media.discordapp.net/attachments/722053143390846978/779837383285801030/seal_1.png?width=678&height=677" alt="GTA World - Heavy Text Based GTA V Roleplay server - Logo">
-        <br><br>
-        <p>
-        GTA WORLD is not affiliated with or endorsed by Rockstar North, Take-Two Interactive or other rightsholders. Any trademarks used belong to their respective owners. GTA WORLD reserves all rights on rightly owned images and other visual content provided on GTA.WORLD.
-        </p>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="side-block">
+                  <div class="block-content">
+                    <img
+                      style="width: 50%; align-self: start"
+                      src="https://media.discordapp.net/attachments/722053143390846978/779837383285801030/seal_1.png?width=678&height=677"
+                      alt="GTA World - Heavy Text Based GTA V Roleplay server - Logo"
+                    />
+                    <br /><br />
+                    <p>
+                      GTA WORLD is not affiliated with or endorsed by Rockstar
+                      North, Take-Two Interactive or other rightsholders. Any
+                      trademarks used belong to their respective owners. GTA
+                      WORLD reserves all rights on rightly owned images and
+                      other visual content provided on GTA.WORLD.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="side-block" style="margin-top: 30px">
+                  <h4 class="block-title">Legal</h4>
+                  <div class="block-content">
+                    <a
+                      href="https://gta.world/terms"
+                      style="text-decoration: none"
+                      >Terms of Use</a
+                    >
+                    <br /><br />
+                    <a
+                      href="https://gta.world/terms"
+                      style="text-decoration: none"
+                      >Privacy Policy</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="side-block" style="margin-top: 30px">
+                  <h4 class="block-title">Social Media</h4>
+                  <a href="https://www.facebook.com/gtawroleplay/"
+                    ><img
+                      src="https://www.chiaragiorleo.com/wp-content/uploads/2013/10/Fb-logo-tondo.png"
+                      width="30"
+                  /></a>
+                  <a href="https://twitter.com/gtawrp"
+                    ><img
+                      src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/YouTube.max-1100x1100.png"
+                      width="30"
+                  /></a>
+                  <a href="https://www.instagram.com/gtawrp/"
+                    ><img
+                      src="https://en.followersnet.com/wp-content/uploads/2017/07/Instagram.png"
+                      width="30"
+                  /></a>
+                  <a href="https://www.tiktok.com/@gtawrp"
+                    ><img
+                      src="https://wpcdn.us-east-1.vip.tn-cloud.net/www.pittsburghparent.com/content/uploads/2020/09/TikTok-Logo.png"
+                      width="30"
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        </div>
-        </div>
-        
-        <div class="col-md-4">
-        
-        <div class="side-block" style="margin-top: 30px;">
-        <h4 class="block-title">Legal</h4>
-        <div class="block-content">
-        <a href="https://gta.world/terms" style="text-decoration:none;">Terms of Use</a> <br><br>
-        <a href="https://gta.world/terms" style="text-decoration:none">Privacy Policy</a>
-        </div>
-        </div>
-        
-        </div>
-        <div class="col-md-4">
-        
-        <div class="side-block"  style="margin-top: 30px;">
-        <h4 class="block-title">Social Media</h4>
-        <a href="https://www.facebook.com/gtawroleplay/"><img src="https://www.chiaragiorleo.com/wp-content/uploads/2013/10/Fb-logo-tondo.png" width="30"></a>
-        <a href="https://twitter.com/gtawrp"><img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/YouTube.max-1100x1100.png" width="30"></a>
-        <a href="https://www.instagram.com/gtawrp/"><img src="https://en.followersnet.com/wp-content/uploads/2017/07/Instagram.png" width="30"></a>
-        <a href="https://www.tiktok.com/@gtawrp"><img src="https://wpcdn.us-east-1.vip.tn-cloud.net/www.pittsburghparent.com/content/uploads/2020/09/TikTok-Logo.png" width="30"></a>
-        </div>
-        
-        </div>
-        </div>
-        </div>
-        </div>
-        
-        
+
         <div class="copyright">
-        <div class="container">
-        <p>© <strong>GTA World 2015-2020</strong></p>
+          <div class="container">
+            <p>© <strong>GTA World 2015-2020</strong></p>
+          </div>
         </div>
-        </div>
-        
-        </div>
-        </footer>
-        
+      </div>
+    </footer>
+  </div>
+</div>

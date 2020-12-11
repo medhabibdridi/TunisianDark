@@ -1,52 +1,70 @@
 <main class="main-content">
-<div class="container"> 
-<div *ngIf="donation" class="details">
-    <form #f="ngForm">
+  <div class="container">
+    <div *ngIf="donation" class="details">
+      <form #f="ngForm">
         <div class="form-group">
           <label>offre Name</label>
-          <input type="text" name="id" class="form-control"
-                 [(ngModel)]="donation.nom" #i="ngModel" required>
+          <input
+            type="text"
+            name="id"
+            class="form-control"
+            [(ngModel)]="donation.nom"
+            #i="ngModel"
+            required
+          />
         </div>
-        <div class="alert alert-danger" *ngIf="i.touched && t.invalid" >
+        <div class="alert alert-danger" *ngIf="i.touched && i.invalid">
           A Name is required
         </div>
         <div class="form-group">
           <label>Description</label>
-          <input type="text" name="title" class="form-control" [(ngModel)]="donation.description"
-                 required minlength="3" #t="ngModel" pattern="[a-zA-Z]+$">
+          <input
+            type="text"
+            name="title"
+            class="form-control"
+            [(ngModel)]="donation.description"
+            required
+            minlength="3"
+            #t="ngModel"
+            pattern="[a-zA-Z]+$"
+          />
         </div>
         <div class="alert alert-danger" *ngIf="t.touched && t.invalid">
-          <div *ngIf="t.errors.required"> description is required</div>
+          <div *ngIf="t.errors.required">description is required</div>
           <div *ngIf="t.errors.minlength">title minlength is 3</div>
           <div *ngIf="t.errors.pattern">enter a valid description</div>
         </div>
-       
-      
+
         <div class="form-group">
           <label>prix </label>
-          <input type="number" name="price" class="form-control" [(ngModel)]="donation.price"
-                 #q="ngModel" required >
+          <input
+            type="number"
+            name="price"
+            class="form-control"
+            [(ngModel)]="donation.price"
+            #q="ngModel"
+            required
+          />
         </div>
         <div class="alert alert-danger" *ngIf="q.touched && q.invalid">
           price is required
         </div>
-        <div class="alert alert-danger" *ngIf="q.value<0 ">
-          price must be higher than 0 
+        <div class="alert alert-danger" *ngIf="q.value < 0">
+          price must be higher than 0
         </div>
         <div class="form-group">
-            <label>change picture</label> <br>
-            <input type="file" name="img" [(ngModel)]="donation.img"
-                   >
-                   <img [src]='sanitizeImageUrl(donation.img.toString())'  style="width: 300px;" alt="Game 1">
-          </div>
-         
-        <button (click)="save()" class="  btn btn-primary" >save</button>
-        <button (click)="goBack()" class="  btn btn-dark">go back</button>
-   
+          <label>change picture</label> <br />
+          <input type="file" name="img" [(ngModel)]="donation.img" />
+          <img
+            [src]="sanitizeImageUrl(donation.img.toString())"
+            style="width: 300px"
+            alt="Game 1"
+          />
+        </div>
 
-   
+        <button (click)="save()" class="btn btn-primary">save</button>
+        <button (click)="goBack()" class="btn btn-dark">go back</button>
       </form>
-   
-</div>
-</div>
+    </div>
+  </div>
 </main>

@@ -1,98 +1,138 @@
-
- <main class="main-content">
-    <div class="container">
-     <div class="title">
-         <h1  > WhiteList Application</h1>
-         <div class="row" style="display: flex; justify-content: center; "> 
-             <div class="col-md-6" > 
-                 <br>
-                <form [formGroup]="whitelistform" >
-                    <div >
-                    <div class="form-group">
-                        <label>Name</label>
-                        <input type="text" class="form-control" formControlName="nom" placeholder="Name">
-                        <div class="alert alert-danger" *ngIf="nom.errors && nom.touched">
-                          <div *ngIf="nom.errors.required">this  is a required field</div>
-                          <div *ngIf="nom.errors.minlength">your name must have at least 3 letters</div>
-                          
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label>FirstName</label>
-                        <input type="text" class="form-control" formControlName="FirstName" placeholder="FirstName">
-                        <div class="alert alert-danger" *ngIf="FirstName.errors && FirstName.touched">
-                          <div *ngIf="FirstName.errors.required">this  is a required field</div>
-                          <div *ngIf="FirstName.errors.minlength">your Firstname must have at least 3 letters</div>
-                          
-                        </div>
-                      </div>
-                     
-                     
-                      <div class="form-group">
-                        <label>Discord </label>
-                        <input type="text" class="form-control" formControlName="discord" placeholder=" example(david#0000)">
-                        <div class="alert alert-danger" *ngIf="discord.errors && discord.touched">
-                          <div *ngIf="discord.errors.required">this  is a required field</div>
-                          <div *ngIf="discord.errors.pattern">enter a valid discord with a tag</div>
-                          
-                        </div>
-                      </div>
-                    </div>
-                <div class="form-group">
-                  <label>age</label>
-                  <input type="number" class="form-control" formControlName="age" placeholder="At least 18">
-                  <div class="alert alert-danger" *ngIf="age.errors && age.touched">
-                    <div *ngIf="age.errors.required">this  is a required field</div>
-                    <div *ngIf="age.errors.min">you need to be at least 18</div>
-                    
+<main class="main-content">
+  <div class="container">
+    <div class="title">
+      <h1>WhiteList Application</h1>
+      <div class="row" style="display: flex; justify-content: center">
+        <div class="col-md-6">
+          <br />
+          <form [formGroup]="whitelistform">
+            <div>
+              <div class="form-group">
+                <label>Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="nom"
+                  placeholder="Name"
+                />
+                <div
+                  class="alert alert-danger"
+                  *ngIf="nom.errors && nom.touched"
+                >
+                  <div *ngIf="nom.errors.required">
+                    this is a required field
+                  </div>
+                  <div *ngIf="nom.errors.minlength">
+                    your name must have at least 3 letters
                   </div>
                 </div>
-                <div class="answers" style="display: flex; justify-content: space-between;"> 
-                <div class="form-group">
-                    <label>Have you read the rules ?</label>
-                    <select name="rules" class="form-control" formControlName="rules" >
-                        <option value=""> </option>
-                        <option value="yes">yes</option>
-                        <option value="no">no</option>
-                        
-                    </select>
-                  
-                  <div class="alert alert-danger" *ngIf="rules.errors && rules.touched">
-                   pick an answer 
+              </div>
+              <div class="form-group">
+                <label>FirstName</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="FirstName"
+                  placeholder="FirstName"
+                />
+                <div
+                  class="alert alert-danger"
+                  *ngIf="FirstName.errors && FirstName.touched"
+                >
+                  <div *ngIf="FirstName.errors.required">
+                    this is a required field
+                  </div>
+                  <div *ngIf="FirstName.errors.minlength">
+                    your Firstname must have at least 3 letters
                   </div>
                 </div>
-                <div class="form-group">
-                    <label>Do you have a microphone  ?</label>
-                    <select name="mic" class="form-control" formControlName="mic" >
-                        <option value=""> </option>
-                        <option value="yes">yes</option>
-                        <option value="no">no</option>
-                        
-                    </select>
-                  
-                  <div class="alert alert-danger" *ngIf="mic.errors && mic.touched">
-                   pick an answer 
+              </div>
+
+              <div class="form-group">
+                <label>Discord </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="discord"
+                  placeholder=" example(david#0000)"
+                />
+                <div
+                  class="alert alert-danger"
+                  *ngIf="discord.errors && discord.touched"
+                >
+                  <div *ngIf="discord.errors.required">
+                    this is a required field
                   </div>
-
-
+                  <div *ngIf="discord.errors.pattern">
+                    enter a valid discord with a tag
+                  </div>
                 </div>
+              </div>
             </div>
-                <button class="alert alert-primary" type="submit" (click)="apply()" [disabled]="whitelistform.invalid" >   Apply now 
-            
-                </button>
-                
-             
-            </form>
-     </div>
+            <div class="form-group">
+              <label>age</label>
+              <input
+                type="number"
+                class="form-control"
+                formControlName="age"
+                placeholder="At least 18"
+              />
+              <div class="alert alert-danger" *ngIf="age.errors && age.touched">
+                <div *ngIf="age.errors.required">this is a required field</div>
+                <div *ngIf="age.errors.min">you need to be at least 18</div>
+              </div>
+            </div>
+            <div
+              class="answers"
+              style="display: flex; justify-content: space-between"
+            >
+              <div class="form-group">
+                <label>Have you read the rules ?</label>
+                <select
+                  name="rules"
+                  class="form-control"
+                  formControlName="rules"
+                >
+                  <option value=""></option>
+                  <option value="yes">yes</option>
+                  <option value="no">no</option>
+                </select>
+
+                <div
+                  class="alert alert-danger"
+                  *ngIf="rules.errors && rules.touched"
+                >
+                  pick an answer
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Do you have a microphone ?</label>
+                <select name="mic" class="form-control" formControlName="mic">
+                  <option value=""></option>
+                  <option value="yes">yes</option>
+                  <option value="no">no</option>
+                </select>
+
+                <div
+                  class="alert alert-danger"
+                  *ngIf="mic.errors && mic.touched"
+                >
+                  pick an answer
+                </div>
+              </div>
+            </div>
+            <button
+              class="alert alert-primary"
+              type="submit"
+              (click)="apply()"
+              [disabled]="whitelistform.invalid"
+            >
+              Apply now
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
-    </div>
-           
-                
-          
-            
-            
-                
-         
-      
-    </div> <!-- .container -->
+  </div>
+  <!-- .container -->
 </main>
