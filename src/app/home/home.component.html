@@ -8,8 +8,9 @@
         <div class="parapgraphe ">
                 <h5>Welcome to one of the best tunisian RP servers  with over 1000+ member  <br>   Click below to connect to the server or join our Discord </h5>
         </div>
-       
-        
+        <div *ngIf="auth.user$ | async;">
+        <button class="btn btn-success" (click)=go()>  admin panel  </button>  </div>
+      
 
   </div>
   <div style="margin-left: 100px;  
