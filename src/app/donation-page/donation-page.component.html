@@ -7,23 +7,23 @@
                 <figure class="movie-poster"><img style="height: auto; width: 100%;" [src]='sanitizeImageUrl(donation.img.toString())'  alt="Game 1"></figure>
             </div>
             <div class="col-md-6">
-                <h2 class="movie-title">{{donation.nom}}</h2>
+                <h2 appHighlight class="movie-title">{{donation.nom}}</h2>
                 <div class="movie-summary">
-                    <p>{{donation.description}} </p>
+                    <p  >{{donation.description}} </p>
 
                 </div>
                 <ul class="movie-meta">
                     
-                    <li><strong>price:</strong> {{donation.price}} $</li>
+                    <li  ><strong>price:</strong> {{donation.price}} $</li>
                 </ul>
 
-               <button class="btn btn-dark " (click)="showForm()"> how to donate </button>
+               <button  class="btn btn-dark " (click)="showForm()"> how to donate </button>
             </div>
         </div> <!-- .row -->
         <div class="entry-content" *ngIf="formState">
            
             <h2 style="color: teal; font-family: fantasy; text-align: center;"> STEPS TO FOLLOW </h2>
-            <p> <strong> You can choose one of the following three available methods <br>
+            <p  > <strong> You can choose one of the following three available methods <br>
                 after payment make sure you send in the reciept to an admin in discord
             </strong></p>
             <div class="row" style="margin-top: 20px;"> 
